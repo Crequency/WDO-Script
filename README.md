@@ -79,14 +79,14 @@ Function Main(List<String> args){                                   ##  应用�
         Console.WriteLine(i)
     );
 
-    for(var i = 1, i < 10, ++ i, () => {
+    for(var i = 1, i < 10, ++ i, () => {                            ##  打印九九乘法表
         for(var j = 1, j < 10, ++ j, () =>
             Console.Write($"{i} x {j} = {i * j}\t")
         );
         Console.WriteLine();
     });
 
-    for(i<0:9>, () => {
+    for(i<0:9>, () => {                                             ##  使用 Range 表达式
         for(j<i:9>, Console.Write($"{i} x {j} = {i * j}\t"));
         Console.WriteLine();
     });
@@ -96,7 +96,34 @@ Function Main(List<String> args){                                   ##  应用�
 
     while(do_i >= 0, -- do_i);                                      ##  while(){}
 
+    var exp = new Expression<Bool>("a + b > c");                    ##  声明一个表达式
+    var ans = exp.Calculate();                                      ##  获取计算结果
 
+    Interger x;                                                     ##  声明一个整形
+    var exp = new Expression<Interger>("a + b");                    ##  声明一个表达式
+    var act = new Action(){                                         ##  声明一个命令(语句)
+        Type = Action.Assign,                                       ##  类型为赋值语句
+        Recipient = x,                                              ##  接受运算值的变量
+        RecipientType = typeof(Interger),                           ##  接受变量的类型
+        Expression = exp                                            ##  表达式
+    };
+    act.Invoke();                                                   ##  执行命令
+    
+    var tmp_1 = () => {                                             ##  一个 Lambda 表达式
+        Console.WriteLine("");
+        Console.WriteLine("");
+    };
+    var tmp_2 = new Actions(){                                      ##  底层类型 Actions , 即 Action 的集合
+        new Action(){
+            Type = Action.FuncCall,
+            Expression = "Console.WriteLine(\"\")"
+        },
+        new Action(){
+            Type = Action.FuncCall,
+            Expression = "Console.WriteLine(\"\")"
+        }
+    };
+    Console.WriteLine(tmp_1 == tmp_2);                              ##  应该输出 True , 本质上是相同的
 }
 ```
 
