@@ -16,9 +16,9 @@ namespace WDScript
         /// <returns>构造好的字符串</returns>
         internal static string BuildString(int length, char sign)
         {
-            string str = "";
-            for (int i = 0; i < length; i++) str += sign;
-            return str;
+            var sb = new StringBuilder();
+            sb.Append(sign, length);
+            return sb.ToString();
         }
 
         /// <summary>
