@@ -99,12 +99,12 @@ Function Main(List<String> args){                                   ##  应用�
     var exp = new Expression<Bool>("a + b > c");                    ##  声明一个表达式
     var ans = exp.Calculate();                                      ##  获取计算结果
 
-    Interger x;                                                     ##  声明一个整形
-    var exp = new Expression<Interger>("a + b");                    ##  声明一个表达式
+    Integer x;                                                      ##  声明一个整形
+    var exp = new Expression<Integer>("a + b");                     ##  声明一个表达式
     var act = new Action(){                                         ##  声明一个命令(语句)
         Type = Action.Assign,                                       ##  类型为赋值语句
         Recipient = x,                                              ##  接受运算值的变量
-        RecipientType = typeof(Interger),                           ##  接受变量的类型
+        RecipientType = typeof(Integer),                            ##  接受变量的类型
         Expression = exp                                            ##  表达式
     };
     act.Invoke();                                                   ##  执行命令
