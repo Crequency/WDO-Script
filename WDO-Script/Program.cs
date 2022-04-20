@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WDScript
+namespace WDOScript
 {
     public class Program
     {

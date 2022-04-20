@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WDScript.WDScript.Models.Standard;
+using WDOScript.WDOScript.Models.Standard;
 
-using std = WDScript.WDScript.Models.Standard.StandardHelper;
+using std = WDOScript.WDOScript.Models.Standard.StandardHelper;
 
-namespace WDScript.WDScript.Models
+namespace WDOScript.WDOScript.Models
 {
     public struct Number
     {

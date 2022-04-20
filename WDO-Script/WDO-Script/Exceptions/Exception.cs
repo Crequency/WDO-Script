@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WDScript.WDScript.Exceptions
+namespace WDOScript.WDOScript.Exceptions
 {
     public class Exception
     {

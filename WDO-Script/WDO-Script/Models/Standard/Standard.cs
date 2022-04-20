@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WDScript.WDScript.Models.Standard
+namespace WDOScript.WDOScript.Models.Standard
 {
     public class StandardHelper
     {

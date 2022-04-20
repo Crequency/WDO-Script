@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WDScript.WDScript.Exceptions;
+using WDOScript.WDOScript.Exceptions;
 
-using Exception = WDScript.WDScript.Exceptions.Exception;
+using Exception = WDOScript.WDOScript.Exceptions.Exception;
 
-namespace WDScript.WDScript
+namespace WDOScript.WDOScript
 {
     public class ExceptionHandler
     {
