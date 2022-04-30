@@ -1,16 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<FileVersion>1.0.$([System.DateTime]::UtcNow.Date.Subtract($([System.DateTime]::Parse("2005-07-16"))).TotalDays).$([System.Math]::Floor($([MSBuild]::Divide($([System.DateTime]::UtcNow.TimeOfDay.TotalSeconds), 1.32))))</FileVersion>
+		<Version>1.0.$([System.DateTime]::UtcNow.Date.Subtract($([System.DateTime]::Parse("2005-07-16"))).TotalDays).$([System.DateTime]::UtcNow.ToString("mmss"))</Version>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="WDScript\**" />
-    <EmbeddedResource Remove="WDScript\**" />
-    <None Remove="WDScript\**" />
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="WDScript\**" />
+		<EmbeddedResource Remove="WDScript\**" />
+		<None Remove="WDScript\**" />
+	</ItemGroup>
 
 </Project>
