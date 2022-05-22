@@ -11,3 +11,4 @@ CTestTestfile.cmake
 _deps
 
 Interpreter/VM/.idea
+Interpreter/cmake-build-debug
