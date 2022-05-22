@@ -4,9 +4,13 @@
 // E-Mail:   catrol@qq.com
 // Date:     2022-05-22
 
-#include "VM/vm.h"
+#include <bits/stdc++.h>
 
-int main(int argc, char** argv) {
+typedef __int32 i32;
+typedef __int64 i64;
 
-    return 0;
+namespace wdo_vm_read{
+    i64 read_address(std::string str);
 }
+
+

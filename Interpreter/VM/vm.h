@@ -1,36 +1,20 @@
-#include <bits/stdc++.h>
-
 // Copyright (c) Catrol 2022-present.
 // ALL RIGHTS RESERVED.
 // Author:   Dynesshely/Catrol
 // E-Mail:   catrol@qq.com
 // Date:     2022-05-22
 
+#include "memory.h"
+#include "assembly.read.h"
+
 namespace wdo_vm{
-    struct row{
-        public:
-            std::bitset<8>* memory;
-            int length;
-            inline void init(int len){
-                memory = new std::bitset<8>[len];
-                length = len;
-            }
-            inline void set(int value){
-                for(int i = 0; i < length; ++ i)
-                    memory[i] = value;
-            }
-            inline void dispose(){
-                delete[] memory;
-                memory = nullptr;
-            }
-    };
 
     struct var_values{
         public:
-            row* values;
-            int length;
-            inline void init(int len){
-                values = new row[len];
+            wdo_memory::row* values;
+            i64 length;
+            inline void init(i64 len){
+                values = new wdo_memory::row[len];
                 length = len;
             }
             inline void dispose(){
@@ -39,10 +23,32 @@ namespace wdo_vm{
             }
     };
 
-    struct var_ids{
-        //TODO: 一颗字母树, 定位标识符的ID, 叶节点存储ID, 路径为字符
-
+    struct var_name_node{
+        public:
+            char word;
+            var_name_node *left, *right;
+            wdo_memory::row value;
     };
+
+    void init(), dispose();
+
+    i32 process(i64 address, bool bit);
+    i32 process(i64 address, wdo_memory::row value);
+
+    enum operation{
+        addition = 0,
+        subtraction = 1,
+        multiplication = 2,
+        division = 3,
+        _mod = 4, _and = 5,
+        _or = 6, _xor = 7
+    };
+
+    i32 process(i64 address_a, i64 address_b, i64 address_c, operation opr);
+
+    i64 find(std::string name);
+
+    void process(std::string cmd);
 }
 
 
