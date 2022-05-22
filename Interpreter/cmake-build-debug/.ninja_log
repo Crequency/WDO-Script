@@ -1,0 +1,4 @@
+# ninja log v5
+1	99	6748509762025991	CMakeFiles/Interpreter.dir/VM/vm.cpp.obj	2f24138ffeeab63
+22	689	6748509767893970	CMakeFiles/Interpreter.dir/main.cpp.obj	cdf17e1acd6224d0
+691	903	6748509769987890	Interpreter.exe	b7b45e4ad206a006
